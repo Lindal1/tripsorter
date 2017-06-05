@@ -20,3 +20,5 @@ echo $sorter->addItem($card1)
   ->render();
 
 ```
+
+See tests if you want know how it works.
