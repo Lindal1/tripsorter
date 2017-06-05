@@ -1,4 +1,25 @@
 # Trip Sorter
+
+For install add in your composer.json
+```
+"lindal1/tripsorter": "dev-master"
+```
+and in 'repository block'
+```
+{
+    "type": "git",
+    "url": "git@github.com:Lindal1/tripsorter.git"
+}
+```
+
+If you want run test locally exec
+```
+git clone https://github.com/Lindal1/tripsorter.git
+cd tripsorter
+composer install
+php test.php
+```
+
 Create boarding card example:
 ```
 $card = BoardingCardFactory::build([
