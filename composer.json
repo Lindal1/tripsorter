@@ -1,0 +1,17 @@
+{
+  "name": "lindal1/tripsorter",
+  "type": "module",
+  "description": "This is implementation test case for vacancy.",
+  "authors": [
+    {
+      "name": "lindal",
+      "email": "syardin.ilya@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "lindal1\\tripsorter\\tests\\": "tests/",
+      "lindal1\\tripsorter\\": "src/"
+    }
+  }
+}
