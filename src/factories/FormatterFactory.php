@@ -25,6 +25,23 @@ class FormatterFactory
     {
         $className = $params['class'] ?? Formatter::class;
         $formatter = new $className($boardingCard);
+        /** @var IFormatter $formatter */
+        if (isset($params['templates']) && is_array($params['templates'])) {
+            $formatter->setTemplates($params['templates']);
+        }
+        if (isset($params['emptyTemplates']) && is_array($params['emptyTemplates'])) {
+            $formatter->setEmptyTemplates($params['emptyTemplates']);
+        }
+        if (isset($params['order']) && is_array($params['order'])) {
+            $formatter->setOrder($params['order']);
+        }
+        if (isset($params['defaultTemplate'])) {
+            $formatter->setDefaultTemplate($params['defaultTemplate']);
+        }
+        if (isset($params['separator'])) {
+            $formatter->setSeparator($params['separator']);
+        }
+
         return $formatter;
     }
 

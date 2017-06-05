@@ -72,4 +72,16 @@ interface IFormatter
      */
     public function getBoardingCard(): IBoardingCard;
 
+    /**
+     * @param array $templates
+     * @return IFormatter
+     */
+    public function setTemplates(array $templates): IFormatter;
+
+    /**
+     * @param array $templates
+     * @return IFormatter
+     */
+    public function setEmptyTemplates(array $templates): IFormatter;
+
 }

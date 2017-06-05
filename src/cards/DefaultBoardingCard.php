@@ -16,6 +16,7 @@ class DefaultBoardingCard implements IBoardingCard
     protected $formatter;
 
     /**
+     * $attributes['from'] and $attribute['to'] is required attributes
      * AbstractBoardingCard constructor.
      * @param array $attributes
      */

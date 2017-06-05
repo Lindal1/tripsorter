@@ -6,11 +6,15 @@ require_once 'vendor/autoload.php';
 require_once 'tests/cases/BoardingCardTest.php';
 require_once 'tests/cases/FormatterTest.php';
 require_once 'tests/cases/SorterTest.php';
+require_once 'tests/cases/BoardingCardFactoryTest.php';
+require_once 'tests/cases/FormatterFactoryTest.php';
 
 $tests = [
     new BoardingCardTest(),
     new FormatterTest(),
-    new SorterTest()
+    new SorterTest(),
+    new BoardingCardFactoryTest(),
+    new FormatterFactoryTest()
 ];
 
 foreach ($tests as $test) {

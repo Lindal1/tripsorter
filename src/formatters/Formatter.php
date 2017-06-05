@@ -86,7 +86,7 @@ class Formatter implements IFormatter
      */
     public function getTemplate(string $attribute): string
     {
-        return $this->templates[$attribute] ?? $this->defaultTemplate;
+        return $this->templates[$attribute] ?? $this->emptyTemplates[$attribute] ?? $this->defaultTemplate;
     }
 
     /**
@@ -139,5 +139,25 @@ class Formatter implements IFormatter
     public function getBoardingCard(): IBoardingCard
     {
         return $this->boardingCard;
+    }
+
+    /**
+     * @param array $templates
+     * @return IFormatter
+     */
+    public function setTemplates(array $templates): IFormatter
+    {
+        $this->templates = $templates;
+        return $this;
+    }
+
+    /**
+     * @param array $templates
+     * @return IFormatter
+     */
+    public function setEmptyTemplates(array $templates): IFormatter
+    {
+        $this->emptyTemplates = $templates;
+        return $this;
     }
 }

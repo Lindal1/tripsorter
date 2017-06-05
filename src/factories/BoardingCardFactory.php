@@ -1,5 +1,5 @@
 <?php
-namespace lindal1\tripsorter;
+namespace lindal1\tripsorter\factories;
 
 use lindal1\tripsorter\cards\DefaultBoardingCard;
 use lindal1\tripsorter\factories\FormatterFactory;
@@ -9,7 +9,7 @@ class BoardingCardFactory
 {
 
     /**
-     * $params['class']         defined class which need to use for initialization BoardingCard
+     * $params['class']         defined class which need to use for BoardingCard
      * $params['attributes']    attributes for boarding cards
      * $params['formatter']     is params for FormatterFactory
      *

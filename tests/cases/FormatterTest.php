@@ -47,4 +47,12 @@ class FormatterTest extends TestCase
         $this->assertEqual([$formatter->render(), 'seat: #32, to: Point B, from: Point A']);
     }
 
+    public function testSetEmptyTemplate()
+    {
+        $formatter = $this->getFormatter()
+            ->setEmptyTemplate('some attribute', 'some attribute is empty');
+        $formatter->getBoardingCard()->setAttribute('some attribute', '');
+        $this->assertEqual(['from: Point A, to: Point B, some attribute is empty', $formatter->render()]);
+    }
+
 }
